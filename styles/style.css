@@ -176,6 +176,21 @@ input:focus {
     display: inline;
 }
 
+form > div:nth-child(5) {
+    position: relative;
+}
+
+.message {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: -1rem;
+    font-style: normal;
+}
+
+.error-input {
+    border: 1px solid red;
+}
+
 @media (max-width: 850px) {
     .form {
         column-gap: 25px;
