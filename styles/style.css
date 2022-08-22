@@ -1,4 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 @font-face {
-    font-family: Norse-bold;
+    font-family: Norse-Bold;
     src: url("../fonts/Norse-Bold.otf") format("opentype");
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+}
+
+input {
+    display: block;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #0E0E0E;
+    margin: 0;
+}
+
+*:link {
+    color: #F9FAFB;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 1250px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.sidebar {
+    background-image: url(../images/back.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #F9FAFB;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 35%;
+}
+
+.logo-wrapper {
+    margin-top: 20vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.logo-image {
+    height: 100px;
+}
+
+.logo-text {
+    font-family: Norse-Bold, sans-serif;
+    font-size: 2.5rem;
+}
+
+.tribute {
+    align-self: center;
+    font-size: 0.8rem;
+}
+
+.main {
+    background: #F9FAFB;
+    flex: 1 2 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    font-weight: bold;
+}
+
+.main > * {
+    padding-left: 30px;
+}
+
+.intro {
+    padding-top: 15px;
+    max-width: 82%; 
+}
+
+.form-wrapper {
+    background: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.form {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: min-content min-content;
+    column-gap: 50px;
+}
+
+.form  label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.actions-wrapper {
+    padding-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .logo-wrapper {
+        flex-direction: column;
+    }
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    input {
+        width: 60%;
+    }
+}
+
+@media (max-width: 500px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .logo-image {
+        justify-self: center;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    .main {
+        justify-content: space-evenly;
+    }
+
+    .logo-wrapper {
+        margin-top: 0vh;
+    }
+
+    .logo-text, .tribute {
+        display: none;
+    }
+
+    .sidebar {
+        display: block;
+        flex: none;
+    }
 }
