@@ -29,20 +29,26 @@ h1 {
     margin: 0;
 }
 
+.i {
+    display: inline-block;
+    font-style: oblique 20deg;
+    margin-right: 3px;
+}
+
 body {
     background: #0E0E0E;
     margin: 0;
 }
 
 *:link {
-    color: #F9FAFB;
+    color: rgb(212, 211, 211);
 }
 
 .wrapper {
     display: flex;
     max-width: 1250px;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .sidebar {
@@ -50,7 +56,8 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #F9FAFB;
+    padding-bottom: 10px;
+    color: rgb(212, 211, 211);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -78,6 +85,7 @@ body {
 .tribute {
     align-self: center;
     font-size: 0.8rem;
+    text-align: center;
 }
 
 .main {
@@ -86,8 +94,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     font-weight: bold;
+    padding: 30px 0;
 }
 
 .main > * {
@@ -95,34 +104,85 @@ body {
 }
 
 .intro {
-    padding-top: 15px;
     max-width: 82%; 
 }
 
 .form-wrapper {
     background: #FFFFFF;
+    padding-right: 10px;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    box-shadow: 0px 2px 4px rgb(201, 201, 201);
+}
+
+.title {
+    padding: 5px 0 15px;
 }
 
 .form {
     display: grid;
-    grid-auto-rows: auto;
+    row-gap: 8px;
     grid-template-columns: min-content min-content;
     column-gap: 50px;
 }
 
 .form  label {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-.actions-wrapper {
-    padding-bottom: 10px;
+input {
+    height: 30px;
+    width: 230px;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 231, 231);
+    box-shadow: none;
+    transition: all 0.3s;
 }
 
-@media (max-width: 700px) {
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 4px rgb(169, 169, 253);
+}
+
+.submit-btn {
+    background: #596D48;
+    box-shadow:1px 2px 3px rgb(153, 153, 153);
+    color:#F9FAFB;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 40px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.submit-btn:active {
+    box-shadow: none;
+}
+
+.login-reminder {
+    font-size: 1rem;
+}
+
+.login-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bolder;
+    color: #596D48;
+    display: inline;
+}
+
+@media (max-width: 850px) {
+    .form {
+        column-gap: 25px;
+    }
+}
+
+@media (max-width: 750px) {
     .form {
         grid-template-columns: 1fr;
     }
@@ -168,5 +228,6 @@ body {
     .sidebar {
         display: block;
         flex: none;
+        padding: 0;
     }
 }
